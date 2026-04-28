@@ -9,7 +9,7 @@ class AceConfig(acedefconfig.AceDefConfig):
     # ----------------------------------------------------
     #
     # Spawn Ace Stream Engine automatically
-    acespawn = False
+    acespawn = True
     # Ace Stream cmd line (use `--log-file filepath` to write log)
     # You need to set it only on Linux based systems. Autodetect for Windows!
     acecmd = '/opt/acestream/start-engine --client-console --live-buffer 25 --vod-buffer 10'
@@ -19,7 +19,7 @@ class AceConfig(acedefconfig.AceDefConfig):
     # By default Ace Stream Engine listens only Localhost IP, so if you want to use a running
     # somewhere (remotely) AceEngine - start it  with --bind-all parameter, set acespawn=False
     # and enter your settings below
-    ace = { 'aceHostIP': 'nordvpn', 'aceAPIport': '62062', 'aceHTTPport': '6878' }
+    ace = { 'aceHostIP': '127.0.0.1', 'aceAPIport': '62062', 'aceHTTPport': '6878' }
     # Ace Stream age parameter (LT_13, 13_17, 18_24, 25_34, 35_44, 45_54,
     # 55_64, GT_65)
     aceage = AceConst.AGE_35_44
