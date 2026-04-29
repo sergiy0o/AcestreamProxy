@@ -41,8 +41,8 @@ class AceConfig(acedefconfig.AceDefConfig):
     # Transcode All audio to AAC (transcode_audio=1)
     # Transcode MP3 (use only when transcode_audio=1)
     # Transcode only AC3 to AAC (use only when transcode_audio=0)
-    acestreamtype = {'output_format': 'http'}
-    #acestreamtype = {'output_format': 'hls', 'transcode_audio': 0, 'transcode_mp3': 0, 'transcode_ac3': 0, 'preferred_audio_language': 'rus'}
+    #acestreamtype = {'output_format': 'http'}
+    acestreamtype = {'output_format': 'hls', 'transcode_audio': 0, 'transcode_mp3': 0, 'transcode_ac3': 0, 'preferred_audio_language': 'spa'}
     # ----------------------------------------------------
     # Seek back feature.
     # Seeks stream back for specified amount of seconds.
