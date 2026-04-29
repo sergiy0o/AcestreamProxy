@@ -12,7 +12,8 @@ class AceConfig(acedefconfig.AceDefConfig):
     acespawn = False
     # Ace Stream cmd line (use `--log-file filepath` to write log)
     # You need to set it only on Linux based systems. Autodetect for Windows!
-    acecmd = '/opt/acestream/start-engine --client-console --live-buffer 60 --vod-buffer 10'
+    #acecmd = '/opt/acestream/start-engine --client-console --live-buffer 25 --vod-buffer 10'
+    acecmd = '/opt/acestream/start-engine --client-console --live-buffer 60 --vod-buffer 10 --live-cache-type memory --live-nodes-buffer 10'
     # Ace Stream API key
     # You probably shouldn't touch this
     acekey = 'n51LvQoTlJzNGaFxseRK-uvnvX-sD4Vm5Axwmc4UcoD-jruxmKsuJaH0eVgE'
@@ -42,7 +43,7 @@ class AceConfig(acedefconfig.AceDefConfig):
     # Transcode MP3 (use only when transcode_audio=1)
     # Transcode only AC3 to AAC (use only when transcode_audio=0)
     #acestreamtype = {'output_format': 'http'}
-    acestreamtype = {'output_format': 'hls', 'transcode_audio': 0, 'transcode_mp3': 0, 'transcode_ac3': 0, 'preferred_audio_language': 'spa'}
+    acestreamtype = {'output_format': 'hls', 'transcode_audio': 1, 'transcode_mp3': 0, 'transcode_ac3': 1, 'preferred_audio_language': 'spa'}
     # ----------------------------------------------------
     # Seek back feature.
     # Seeks stream back for specified amount of seconds.
@@ -51,7 +52,7 @@ class AceConfig(acedefconfig.AceDefConfig):
     # !!!!! Don't use with streamtype = 'hls' !!!!!
     videoseekback = 0
     # Waiting time response in seconds from AceEngine server for playable url or data.
-    videotimeout = 60
+    videotimeout = 120
     # ----------------------------------------------------
     # HTTP AceProxy configuration
     # ----------------------------------------------------
