@@ -42,7 +42,7 @@ class AceConfig(acedefconfig.AceDefConfig):
     # Transcode MP3 (use only when transcode_audio=1)
     # Transcode only AC3 to AAC (use only when transcode_audio=0)
     #acestreamtype = {'output_format': 'http'}
-    acestreamtype = {'output_format': 'hls', 'transcode_audio': 1, 'transcode_mp3': 0, 'transcode_ac3': 1, 'preferred_audio_language': 'spa'}
+    acestreamtype = {'output_format': 'hls', 'transcode_audio': 0, 'transcode_mp3': 0, 'transcode_ac3': 0, 'preferred_audio_language': 'spa'}
     # ----------------------------------------------------
     # Seek back feature.
     # Seeks stream back for specified amount of seconds.
@@ -79,7 +79,7 @@ class AceConfig(acedefconfig.AceDefConfig):
     # Maximum concurrent connections (video clients)
     maxconns = 10
     # Use 'Transfer-encoding: chunked' in HTTP AceProxy responses
-    use_chunked = False
+    use_chunked = True
     #
     # ----------------------------------------------------
     #       Transcoding configuration for HTTP AceProxy
