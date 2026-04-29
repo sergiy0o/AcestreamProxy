@@ -505,7 +505,7 @@ if AceProxy.ace:
    if AceConfig.osplatform == 'Windows': detectPort()
    else: gevent.sleep(AceConfig.acestartuptimeout)
 else:
-   url = 'http://{aceHostIP}:{aceHTTPport}/webui/app/MYPASS/server'.format(**AceConfig.ace)
+   url = 'http://{aceHostIP}:{aceHTTPport}/webui/api/service'.format(**AceConfig.ace)
    params = {'method': 'get_version', 'format': 'json', 'callback': 'mycallback'}
    try:
       with requests.get(url, params=params, timeout=5) as r:
